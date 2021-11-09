@@ -1,5 +1,6 @@
-package com.gnova.data.api.response
+package com.gnova.data.api
 
+import com.gnova.data.api.response.HotelResponse
 import io.reactivex.Single
 import retrofit2.http.GET
 

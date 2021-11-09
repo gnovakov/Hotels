@@ -1,6 +1,6 @@
 package com.gnova.hotels.di.modules
 
-import com.gnova.data.api.response.HotelsApi
+import com.gnova.data.api.HotelsApi
 import com.gnova.hotels.util.Constants.BASE_URL
 import dagger.Module
 import dagger.Provides
