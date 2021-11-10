@@ -1,6 +1,5 @@
 package com.gnova.hotels.ui.hotels
 
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -35,7 +34,6 @@ class HotelsViewModel@Inject constructor(private val hotelsRepo: HotelsRepoImpl)
                     _viewState.value = HotelsViewState.Presenting(it)
                 }, {
                     RxJavaPlugins.onError(it)
-                    //Log.d("TAG", "ERROR HOME VM $it")
                     _viewState.value = HotelsViewState.Error
                 })
         )
