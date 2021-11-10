@@ -7,6 +7,6 @@ import retrofit2.http.GET
 interface HotelsApi {
 
     @GET("/raw")
-    fun getHotels(): Single<List<HotelResponse>>
+    fun getHotels(): Single<HotelResponse>
 
 }

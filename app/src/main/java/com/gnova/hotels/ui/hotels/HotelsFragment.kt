@@ -19,6 +19,8 @@ class HotelsFragment : Fragment(R.layout.fragment_hotels) {
         (requireActivity().application as App).appComponent.inject(this)
         val binding = FragmentHotelsBinding.bind(view)
         _binding = binding
+
+
     }
 
 }
