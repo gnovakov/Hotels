@@ -82,7 +82,9 @@ class HotelsFragment : Fragment(R.layout.fragment_hotels) {
     }
 
     private fun onItemClicked(hotel: HotelAvailability) {
-        Log.d("TAG", "Item Clicked")
+        findNavController().navigate(
+            HotelsFragmentDirections.actionHotelsFragmentToDetailFragment(hotel)
+        )
     }
 
     override fun onDestroyView() {

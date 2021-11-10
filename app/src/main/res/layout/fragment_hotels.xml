@@ -33,14 +33,13 @@
             </androidx.appcompat.widget.Toolbar>
 
             <TextView
-                android:id="@+id/list_toolbar_tv"
+                android:id="@+id/hotel_toolbar_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="@string/hotel_fragment_toolbar_name"
-                android:textColor="@color/black"
-                android:textSize="25sp"
-                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
