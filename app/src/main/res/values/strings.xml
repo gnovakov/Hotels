@@ -2,4 +2,13 @@
     <string name="app_name">Hotels</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="status_image">Status Image</string>
+    <string name="hotel_fragment_toolbar_name">Hotels</string>
+    <string name="hotel_name_tv">London Farringdon (Smithfield)</string>
+    <string name="hotel_description_tv">Just a 10-minute walk from Farringdon station, close to Smithfield Market and the Museum of London</string>
+    <string name="rooms_title_tv">Rooms</string>
+    <string name="room_type_tv">Twin</string>
+    <string name="room_name_tv">Flex</string>
+    <string name="room_price_tv">199.99</string>
+    <string name="room_currency_tv">£</string>
 </resources>
