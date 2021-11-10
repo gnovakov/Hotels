@@ -4,7 +4,7 @@ import com.squareup.moshi.Json
 
 data class TripAdvisorDTO(
     @Json(name = "linkUrl")
-    val linkUrl: String,
+    val linkUrl: String? = "",
     @Json(name = "ratingImageUrl")
-    val ratingImageUrl: String,
+    val ratingImageUrl: String? = ""
 )

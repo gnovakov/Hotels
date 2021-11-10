@@ -3,5 +3,5 @@ package com.gnova.domain.models
 import java.io.Serializable
 
 data class Image(
-    val fileReference: String
+    val fileReference: String? = ""
 ) : Serializable

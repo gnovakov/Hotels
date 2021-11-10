@@ -6,13 +6,13 @@ data class HotelInfoDTO(
     @Json(name = "address")
     val address: AddressDTO,
     @Json(name = "headline")
-    val headline: String,
+    val headline: String? = "",
     @Json(name = "images")
     val images: List<ImageDTO>,
     @Json(name = "map")
     val map: MapDTO,
     @Json(name = "name")
-    val name: String,
+    val name: String? = "",
     @Json(name = "tripAdvisor")
     val tripAdvisor: TripAdvisorDTO
 )

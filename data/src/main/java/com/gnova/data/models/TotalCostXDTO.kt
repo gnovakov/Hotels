@@ -4,7 +4,7 @@ import com.squareup.moshi.Json
 
 data class TotalCostXDTO(
     @Json(name = "amount")
-    val amount: String,
+    val amount: String? = "",
     @Json(name = "currency")
-    val currency: String
+    val currency: String? = ""
 )

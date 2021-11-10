@@ -11,14 +11,14 @@ class ImageDTOMapper @Inject constructor() : DomainMapper<ImageDTO, Image> {
 
     override fun mapToDomain(dto: ImageDTO): Image {
         return Image(
-            fileReference = dto.fileReference,
+            fileReference = dto.fileReference
 
         )
     }
 
     override fun mapToEntity(entity: Image): ImageDTO {
         return ImageDTO(
-            fileReference = entity.fileReference,
+            fileReference = entity.fileReference
 
         )
     }

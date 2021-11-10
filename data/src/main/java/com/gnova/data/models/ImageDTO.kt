@@ -4,5 +4,5 @@ import com.squareup.moshi.Json
 
 data class ImageDTO(
     @Json(name = "fileReference")
-    val fileReference: String /*NEED*/
+    val fileReference: String? = ""
 )

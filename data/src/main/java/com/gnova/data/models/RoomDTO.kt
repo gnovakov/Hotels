@@ -4,5 +4,5 @@ import com.squareup.moshi.Json
 
 data class RoomDTO(
     @Json(name = "type")
-    val type: String
+    val type: String? = ""
 )

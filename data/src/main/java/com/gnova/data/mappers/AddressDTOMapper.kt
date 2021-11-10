@@ -15,7 +15,7 @@ class AddressDTOMapper @Inject constructor() : DomainMapper<AddressDTO, Address>
             addressline2 = dto.addressline2,
             addressline3 = dto.addressline3,
             country = dto.country,
-            postcode = dto.postcode,
+            postcode = dto.postcode
 
         )
     }
@@ -26,7 +26,7 @@ class AddressDTOMapper @Inject constructor() : DomainMapper<AddressDTO, Address>
             addressline2 = entity.addressline2,
             addressline3 = entity.addressline3,
             country = entity.country,
-            postcode = entity.postcode,
+            postcode = entity.postcode
 
         )
     }
