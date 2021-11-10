@@ -1,15 +1,25 @@
 package com.gnova.hotels.ui.hotels
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
+import com.gnova.domain.models.HotelAvailability
 import com.gnova.hotels.App
 import com.gnova.hotels.R
+import com.gnova.hotels.ViewModelFactory
 import com.gnova.hotels.databinding.FragmentHotelsBinding
+import javax.inject.Inject
 
 class HotelsFragment : Fragment(R.layout.fragment_hotels) {
+
+    @Inject
+    internal lateinit var viewModelFactory: ViewModelFactory<HotelsViewModel>
+    private lateinit var viewModel: HotelsViewModel
 
     private var _binding: FragmentHotelsBinding? = null
     private val binding get() = _binding!!
@@ -20,7 +30,40 @@ class HotelsFragment : Fragment(R.layout.fragment_hotels) {
         val binding = FragmentHotelsBinding.bind(view)
         _binding = binding
 
+        viewModel = ViewModelProvider(this, viewModelFactory).get(HotelsViewModel::class.java)
 
+        viewModel.onViewLoaded()
+
+        observeviewState()
+
+    }
+
+    private fun observeviewState() {
+        viewModel.viewState.observe(viewLifecycleOwner, Observer {
+            when (it) {
+                is HotelsViewState.Loading -> {
+                    binding.statusImageIv.visibility = View.VISIBLE
+                    binding.statusImageIv.setImageResource(R.drawable.loading_animation)
+                }
+                is HotelsViewState.Error -> {
+                    binding.statusImageIv.visibility = View.VISIBLE
+                    binding.statusImageIv.setImageResource(R.drawable.ic_connection_error)
+                }
+                is HotelsViewState.Presenting -> {
+                    binding.statusImageIv.visibility = View.GONE
+                    showHotels(it.hotels)
+                }
+            }
+        })
+    }
+
+    private fun showHotels(hotels: List<HotelAvailability>) {
+        Log.d("TAG", "HOTELS : $hotels")
+    }
+
+    override fun onDestroyView() {
+        _binding = null
+        super.onDestroyView()
     }
 
 }

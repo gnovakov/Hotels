@@ -2,6 +2,7 @@ package com.gnova.hotels.di
 
 import android.content.Context
 import com.gnova.hotels.MainActivity
+import com.gnova.hotels.di.modules.ApiModule
 import com.gnova.hotels.di.modules.AppModule
 import com.gnova.hotels.ui.hotels.HotelsFragment
 import dagger.BindsInstance
@@ -9,7 +10,7 @@ import dagger.Component
 import javax.inject.Singleton
 
 @Singleton
-@Component(modules = [AppModule::class])
+@Component(modules = [AppModule::class, ApiModule::class])
 interface AppComponent {
 
     // Factory to create instances of the AppComponent

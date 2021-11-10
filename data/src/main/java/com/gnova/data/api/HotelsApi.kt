@@ -6,7 +6,7 @@ import retrofit2.http.GET
 
 interface HotelsApi {
 
-    @GET("/raw")
+    @GET("example-json-api/hotels/hotelAvailabilities.json")
     fun getHotels(): Single<HotelResponse>
 
 }
