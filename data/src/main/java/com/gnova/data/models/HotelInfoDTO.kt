@@ -5,7 +5,6 @@ import com.squareup.moshi.Json
 data class HotelInfoDTO(
     @Json(name = "address")
     val address: AddressDTO,
-    val code: String,
     @Json(name = "headline")
     val headline: String,
     @Json(name = "images")
