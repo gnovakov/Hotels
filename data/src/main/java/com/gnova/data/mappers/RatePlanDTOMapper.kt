@@ -12,6 +12,7 @@ class RatePlanDTOMapper @Inject constructor(
 
     override fun mapToDomain(dto: RatePlanDTO): RatePlan {
         return RatePlan(
+            description = dto.description,
             name = dto.name,
             rooms = roomDTOMapper.mapToDomainList(dto.rooms),
             totalCost = totalCostXDTOMapper.mapToDomain(dto.totalCost)
@@ -20,6 +21,7 @@ class RatePlanDTOMapper @Inject constructor(
 
     override fun mapToEntity(entity: RatePlan): RatePlanDTO {
         return RatePlanDTO(
+            description = entity.description,
             name = entity.name,
             rooms = roomDTOMapper.mapToEntityList(entity.rooms),
             totalCost = totalCostXDTOMapper.mapToEntity(entity.totalCost)
