@@ -7,6 +7,8 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.gnova.domain.models.RatePlan
 import com.gnova.hotels.databinding.DetailRoomsItemBinding
+import com.gnova.hotels.ui.noZeros
+import com.gnova.hotels.ui.toPriceAmount
 
 class DetailsAdapter() : ListAdapter<RatePlan, DetailsAdapter.DetailsViewHolder>(DiffCallback) {
 
@@ -28,7 +30,7 @@ class DetailsAdapter() : ListAdapter<RatePlan, DetailsAdapter.DetailsViewHolder>
             binding.roomNameTv.text = rates.name
             binding.roomDescriptionTv.text = rates.description
             binding.roomTypeTv.text = rates.rooms[0].type
-            binding.roomPriceTv.text = rates.totalCost.amount
+            binding.roomPriceTv.text = rates.totalCost.amount?.toDouble()?.toPriceAmount()?.noZeros()
 
         }
 

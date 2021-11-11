@@ -11,7 +11,7 @@
     <string name="room_name_tv">Flex</string>
     <string name="room_price_tv">199.99</string>
     <string name="room_currency_tv">£</string>
-    <string name="detail_hotel_address_tv">24-30 West Smithfield, London, EC1A 9HB</string>
+    <string name="detail_hotel_address_tv">24-30 West Smithfield, West Smithfield, London, EC1A 9HB</string>
     <string name="hotel_image">Hotel Image</string>
     <string name="room_description_tv">Pay now or on arrival, fully refundable with free cancellation up to 1pm on the day of arrival</string>
     <string name="detail_toolbar_tv">Hotel Details</string>

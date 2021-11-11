@@ -49,7 +49,8 @@ class DetailFragment : Fragment(R.layout.fragment_detail) {
             .into(binding.detailHotelImageIv)
 
         binding.detailHotelNameTv.text = hotel.hotelInfo.name
-        binding.detailHotelAddressTv.text = hotel.hotelInfo.address.addressline1
+        binding.detailHotelAddressTv.text = "${hotel.hotelInfo.address.addressline1}, ${hotel.hotelInfo.address.addressline2}, ${hotel.hotelInfo.address.addressline3}, ${hotel.hotelInfo.address.postcode}"
+
 
         showRooms(hotel.ratePlans)
 
@@ -71,7 +72,7 @@ class DetailFragment : Fragment(R.layout.fragment_detail) {
     }
 
     private fun backArrowClick() {
-        binding.photosToolbarIv.setOnClickListener {
+        binding.detailToolbarIv.setOnClickListener {
             findNavController().navigate(
                 DetailFragmentDirections.actionDetailFragmentToHotelsFragment()
             )
