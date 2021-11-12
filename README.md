@@ -1,8 +1,8 @@
 
-**Description of the App:** 
+## **Description of the App:** 
 
 
-# Whitbread Tech Test - Android
+### Whitbread Tech Test - Android
 
 I have completed the Whitbread Hotel app, and focused on best practices, using the MVVM Architecture, Clean Architecture (Clean Code Multi Module App, Data, Domain), dependency injection with dagger, and Jetpack libraries where I thought was appropriate and implemented some Unit Tests on the ViewModels.
 
@@ -11,20 +11,20 @@ I saw that integration with web services was not required but I felt to get a pr
 I decided to build the app using the Clean Code/Architecture Multi Module style to showcase my knowledge but also to build the app in a future proof way which would allow the app to grow easily, test easier and hold up over time.
 
 
-The app works as stated on the Brief:
+### The app works as stated on the Brief:
 
 
 1.  The JSON is paresed through Retrofit and Moshi
 
-2. On the main fragment the App displays the Hotel name and Description, a picture of the hotel and a trip advisor image showing the rating of the hotel.
-
-Once the hotel is clicked tha app takes you to a detail fragment where again you can see the picture of the hotel, address and the rooms showing the room name, type and price, along with a a brief description of each option.
+2. On the main fragment the App displays the Hotel name and Description, a picture of the hotel and a trip advisor image showing the rating of the hotel. 
+   
+   Once the hotel is clicked tha app takes you to a detail fragment where again you can see the picture of the hotel, address and the rooms showing the room name, type and price, along with a a brief description of each option.
 
 3. The app is built using the MVVM Architecture pattern.
 
 4. Ive tested on several devices and the design holds up.
 
-Next steps (if I had a little more time):
+### Next steps (if I had a little more time):
 
 - If I had a little more time I would have added the Map with the hotels location.
 
