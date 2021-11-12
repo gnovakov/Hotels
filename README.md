@@ -57,6 +57,3 @@ I decided to build the app using the Clean Code/Architecture Multi Module style 
 
 -   JUnit
 -   Mockito
-
-
-**Goran Novakovic** - gnovakov@gmail.com
