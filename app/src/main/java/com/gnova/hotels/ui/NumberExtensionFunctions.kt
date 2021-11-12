@@ -9,7 +9,7 @@ fun Double.toPriceAmount(): String {
 }
 
 fun String.noZeros(): String {
-    return (if (!this.endsWith(".00")) {
+    return (if (!this.endsWith(".00"))  {
         this
     } else {
         this.substring(0, this.length - 3) }).toString()
