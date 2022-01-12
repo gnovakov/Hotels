@@ -33,7 +33,7 @@ class HotelsViewModel@Inject constructor(private val hotelsRepo: HotelsRepoImpl)
                 .subscribe({
                     _viewState.value = HotelsViewState.Presenting(it)
                 }, {
-                    RxJavaPlugins.onError(it)
+                    //RxJavaPlugins.onError(it)
                     _viewState.value = HotelsViewState.Error
                 })
         )
